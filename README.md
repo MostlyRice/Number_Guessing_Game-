@@ -1,13 +1,13 @@
-Team Random Number Guess
+#Team Random Number Guess
 In this challenge, you will need to create a new Node project (much like we did in lecture).
 
-Base Mode:
+#B ase Mode:
 The final version of this project will have two modes. Depending on the mode, the DOM will display different things.
 
-setup mode
+## setup mode
 play mode
-Tech: Node, Express, and JQuery
-Setup Mode Details
+# Tech: Node, Express, and JQuery
+## Setup Mode Details
 This mode allows the players to configure the range of numbers used in Play Mode.
 
 Inputs on the web page:
@@ -23,7 +23,7 @@ details area for the last guess of each player (tell them if their last guess wa
 cancel game button that goes back to setup mode
 if a guess is correct PROMINENTLY Display which player won (make 'em FEEL it)
 if there is a winner, a restart button that leads to Setup Mode
-Necessary Ingredients
+# Necessary Ingredients
 AKA Client Demands...
 
 All random number stuff should happen on the server: Generation of the random number upon game start as well as comparisons between guesses and the random correct answer. Have the random number generator be in its own node module, look back at the Module Madness activity to do this.
@@ -32,7 +32,7 @@ Take a moment to discuss with your team members why this is something that a cli
 
 Once you get it working, style it up, yo!
 
-Hard Mode:
+# Hard Mode:
 See how many of these you can implement in the given time. Remember to test when applying a feature and make sure your
 
 disallow two users to submit the same guess at the same time
