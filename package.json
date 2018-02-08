@@ -1,0 +1,24 @@
+{
+  "name": "Number_Guessing_Game",
+  "version": "1.0.0",
+  "description": "Gives a basic folder structure for node server usage. You will need to change sources links and files as needed for your projects, but this should give you a good starting point on a folder structure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feora1343/Node_Server_Structure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feora1343/Node_Server_Structure/issues"
+  },
+  "homepage": "https://github.com/Feora1343/Node_Server_Structure#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
