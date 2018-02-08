@@ -4,7 +4,9 @@ function onReady(){
   indexAppend();
     $('#submitGuessBtn').on('click', guessCounter);
 }
+
 var guessesMade = 0;
+
 function guessCounter() {
     guessesMade++;
     var createCountDiv = '<div id=guessCountDiv>';
@@ -19,9 +21,9 @@ function guessCounter() {
 } // end guess counter
 
 function indexAppend(){
-   console.log(‘Appender Function’);
-   var $gameUI = $(‘#gameUI’);
-   var stringToAppend = ‘’;
+   console.log('Appender Function');
+   var $gameUI = $('#gameUI');
+   var stringToAppend = '';
    $gameUI.empty();
    stringToAppend += `<h1>Number Guessing Game</h1>`
    stringToAppend += `<div class="playerOne">`
