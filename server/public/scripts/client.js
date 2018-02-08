@@ -1,1 +1,15 @@
-// Empty js file. Please fill in as needed for your project.
+$(document).ready(onReady);
+
+function onReady(){
+    indexAppend();
+}
+
+function indexAppend(){
+    console.log('Appender Function');
+    var $gameUI = $('#gameUI');
+    var stringToAppend = '';
+    $gameUI.empty();
+    stringToAppend += `<p>I can do what I want</p>` // Add to DOM, copy this, paste below
+    $gameUI.append(stringToAppend);
+}
+
