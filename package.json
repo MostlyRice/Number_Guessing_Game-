@@ -4,7 +4,8 @@
   "description": "Gives a basic folder structure for node server usage. You will need to change sources links and files as needed for your projects, but this should give you a good starting point on a folder structure.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
