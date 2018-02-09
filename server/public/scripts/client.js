@@ -8,7 +8,8 @@ $(document).ready(onReady);
 
 
 function onReady(){  
-   // indexAppend();
+setupAppend();
+$('#gameUI').on('click', '#start', playAppend);
     $('#submitGuessBtn').on('click', function() {
         var newObject = {
             playerOne: Number($('#playerOneInput').val()),
@@ -23,8 +24,7 @@ function onReady(){
     $('#playerTwoInput').val('');
     $('#playerThreeInput').val('');
     $('#playerFourInput').val('');
-    
-   
+
     checkWinnerOne();
     checkWinnerTwo();
     checkWinnerThree();
@@ -117,7 +117,7 @@ function guessCounter() {
 } // end guess counter
 
 
-function indexAppend(){
+function playAppend(){
     console.log('Appender Function');
     var $gameUI = $('#gameUI');
     var stringToAppend = '';
@@ -143,4 +143,20 @@ function indexAppend(){
     stringToAppend += `<button id="submitGuessBtn">Submit Guesses</button>`
     stringToAppend += `<button id="cancelBtn">Cancel Guesses</button>`
     $gameUI.append(stringToAppend);
- } // end indexAppend 
+ } // end playAppend
+
+ function setupAppend(){
+    console.log('Appender Function');
+    var $gameUI = $('#gameUI');
+    var stringToAppend = '';
+    $gameUI.empty();
+    stringToAppend += `<h1>Number Guessing Game</h1>`
+    stringToAppend += `<h2>Setup</h2>`
+    stringToAppend += `<select id="maxSetter">`
+    stringToAppend += `<option value="15">Easy - 15</option>`
+    stringToAppend += `<option value="100">Normal - 100</option>`
+    stringToAppend += `<option value="1000000000">Impossible - 1,000,000,000</option>`
+    stringToAppend += `</select>`
+    stringToAppend += `<button id="start">Start</button>`
+    $gameUI.append(stringToAppend);
+ } // end setupAppend
