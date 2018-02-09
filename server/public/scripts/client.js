@@ -10,7 +10,7 @@ $(document).ready(onReady);
 function onReady(){  
 setupAppend();
 $('#gameUI').on('click', '#start', playAppend);
-    $('#submitGuessBtn').on('click', function() {
+    $('#gameUI').on('click', '#submitGuessBtn', function() {
         var newObject = {
             playerOne: Number($('#playerOneInput').val()),
             playerTwo: Number($('#playerTwoInput').val()),
@@ -188,20 +188,20 @@ function playAppend(){
     $gameUI.empty();
     stringToAppend += `<h1>Number Guessing Game</h1>`
     stringToAppend += `<div class="playerOne">`
-    stringToAppend += `<p>Player 1<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 1 Guess">`
+    stringToAppend += `<h3>Player 1<h3>`
+    stringToAppend += `<input type="text" id='playerOneInput' placeholder="Player 1 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `<div class="playerTwo">`
-    stringToAppend += `<p>Player 2<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 2 Guess">`
+    stringToAppend += `<h3>Player 2<h3>`
+    stringToAppend += `<input type="text" id="playerTwoInput" placeholder="Player 2 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `<div class="playerThree">`
-    stringToAppend +=  `<p>Player 3<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 3 Guess">`
+    stringToAppend +=  `<h3>Player 3<h3>`
+    stringToAppend += `<input type="text" id="playerThreeInput" placeholder="Player 3 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `<div class="playerFour">`
-    stringToAppend += `<p>Player 4<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 4 Guess">`
+    stringToAppend += `<h3>Player 4<h3>`
+    stringToAppend += `<input type="text" id="playerFourInput" placeholder="Player 4 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `</br>`
     stringToAppend += `<button id="submitGuessBtn">Submit Guesses</button>`
