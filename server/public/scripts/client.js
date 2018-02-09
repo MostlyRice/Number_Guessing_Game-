@@ -3,13 +3,13 @@ var playerGuessArray = [];
 var randNum = 11;
 var winners = [];
 
-
 $(document).ready(onReady);
-
 
 function onReady(){  
 setupAppend();
-$('#gameUI').on('click', '#start', playAppend);
+$('#gameUI').on('click', '#start', function(){
+    playAppend();
+}); // end setup
     $('#gameUI').on('click', '#submitGuessBtn', function() {
         var newObject = {
             playerOne: Number($('#playerOneInput').val()),
@@ -30,7 +30,16 @@ $('#gameUI').on('click', '#start', playAppend);
     checkWinnerThree();
     checkWinnerFour();
     }); // end submit
+
+    $('#gameUI').on('click', '#cancelBtn', function() {
+        location.reload();
+    }); // end cancel
+    
+    $('#gameUI').on('click', '#restartBtn', function() {
+        location.reload();
+    }); // end restart
 } // end onReady
+
 
 function checkWinnerOne() {
     for (var i=0; i<playerGuessArray.length; i++) {
@@ -183,6 +192,7 @@ function guessCounter() {
 
 function playAppend(){
     console.log('Appender Function');
+
     var $gameUI = $('#gameUI');
     var stringToAppend = '';
     $gameUI.empty();
@@ -205,7 +215,7 @@ function playAppend(){
     stringToAppend += `</div>`
     stringToAppend += `</br>`
     stringToAppend += `<button id="submitGuessBtn">Submit Guesses</button>`
-    stringToAppend += `<button id="cancelBtn">Cancel Guesses</button>`
+    stringToAppend += `<button id="cancelBtn">Cancel Game</button>`
     $gameUI.append(stringToAppend);
  } // end playAppend
 
