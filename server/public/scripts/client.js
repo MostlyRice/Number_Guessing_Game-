@@ -30,19 +30,34 @@ $('#gameUI').on('click', '#start', playAppend);
     checkWinnerThree();
     checkWinnerFour();
     }); // end submit
-
 } // end onReady
 
 function checkWinnerOne() {
     for (var i=0; i<playerGuessArray.length; i++) {
         if(playerGuessArray[i].playerOne === randNum) {
-            winners.push('PLAYER 1 WINNING GUESS: ' + playerGuessArray[i].playerOne);
+            winners.push('PLAYER 1 WINS!');
         } // end player 1 winner
         else if (playerGuessArray[i].playerOne > randNum) {
-            console.log('PLAYER 1 TOO HIGH: ', playerGuessArray[i].playerOne);
+            var p1Div = '<div id="p1Div">';
+            p1Div += '</div>';
+            $('.playerOne').append(p1Div);
+            $('#p1Div').empty();
+            var p1High = '<p>';
+            p1High += 'Player 1, This is too high: ';
+            p1High += playerGuessArray[i].playerOne;
+            p1High += '</p>';
+            $('#p1Div').append(p1High);
         } // end player 1 too high
         else if (playerGuessArray[i].playerOne < randNum) {
-            console.log('PLAYER 1 TOO LOW: ', playerGuessArray[i].playerOne);
+            var p1Div = '<div id="p1Div">';
+            p1Div += '</div>';
+            $('.playerOne').append(p1Div);
+            $('#p1Div').empty();
+            var p1Low = '<p>';
+            p1Low += 'Player 1, This is too low: ';
+            p1Low += playerGuessArray[i].playerOne;
+            p1Low += '</p>';
+            $('#p1Div').append(p1Low);
         } // end player 1 too low
     } // end loop
 } // end check winner player 1
@@ -50,13 +65,29 @@ function checkWinnerOne() {
 function checkWinnerTwo() {
     for (var i=0; i<playerGuessArray.length; i++) {
         if(playerGuessArray[i].playerTwo === randNum) {
-            winners.push('PLAYER 2 WINNING GUESS: ' + playerGuessArray[i].playerTwo);
+            winners.push('PLAYER 2 WINS!');
         } // end player 2 winner
         else if (playerGuessArray[i].playerTwo > randNum) {
-            console.log('PLAYER 2 TOO HIGH: ', playerGuessArray[i].playerTwo);
+            var p2Div = '<div id="p2Div">';
+            p2Div += '</div>';
+            $('.playerTwo').append(p2Div);
+            $('#p2Div').empty();
+            var p2High = '<p>';
+            p2High += 'Player 2, This is too high: ';
+            p2High += playerGuessArray[i].playerTwo;
+            p2High += '</p>';
+            $('#p2Div').append(p2High);
         } // end player 2 too high
         else if (playerGuessArray[i].playerTwo < randNum) {
-            console.log('PLAYER 2 TOO LOW: ', playerGuessArray[i].playerTwo);
+            var p2Div = '<div id="p2Div">';
+            p2Div += '</div>';
+            $('.playerTwo').append(p2Div);
+            $('#p2Div').empty();
+            var p2Low = '<p>';
+            p2Low += 'Player 2, This is too low: ';
+            p2Low += playerGuessArray[i].playerTwo;
+            p2Low += '</p>';
+            $('#p2Div').append(p2Low);
         } // end player 2 too low
     } // end loop
 } // end check winner player 2
@@ -64,13 +95,29 @@ function checkWinnerTwo() {
 function checkWinnerThree() {
     for (var i=0; i<playerGuessArray.length; i++) {
         if(playerGuessArray[i].playerThree === randNum) {
-            winners.push('PLAYER 3 WINNING GUESS: ' + playerGuessArray[i].playerThree);
+            winners.push('PLAYER 3 WINS!');
         } // end player 3 winner
         else if (playerGuessArray[i].playerThree > randNum) {
-            console.log('PLAYER 3 TOO HIGH: ', playerGuessArray[i].playerThree);
+            var p3Div = '<div id="p3Div">';
+            p3Div += '</div>';
+            $('.playerThree').append(p3Div);
+            $('#p3Div').empty();
+            var p3High = '<p>';
+            p3High += 'Player 3, This is too high: ';
+            p3High += playerGuessArray[i].playerThree;
+            p3High += '</p>';
+            $('#p3Div').append(p3High);
         } // end player 3 too high
         else if (playerGuessArray[i].playerThree < randNum) {
-            console.log('PLAYER 3 TOO LOW: ', playerGuessArray[i].playerThree);
+            var p3Div = '<div id="p3Div">';
+            p3Div += '</div>';
+            $('.playerThree').append(p3Div);
+            $('#p3Div').empty();
+            var p3Low = '<p>';
+            p3Low += 'Player 3, This is too low: ';
+            p3Low += playerGuessArray[i].playerThree;
+            p3Low += '</p>';
+            $('#p3Div').append(p3Low);
         } // end player 3 too low
     } // end loop
 } // end check winner player 3
@@ -78,13 +125,29 @@ function checkWinnerThree() {
 function checkWinnerFour() {
     for (var i=0; i<playerGuessArray.length; i++) {
         if(playerGuessArray[i].playerFour === randNum) {
-            winners.push('PLAYER 4 WINNING GUESS: ' + playerGuessArray[i].playerFour);
+            winners.push('PLAYER 4 WINS!');
         } // end player 4 winner
         else if (playerGuessArray[i].playerFour > randNum) {
-            console.log('PLAYER 4 TOO HIGH: ', playerGuessArray[i].playerFour);
+            var p4Div = '<div id="p4Div">';
+            p4Div += '</div>';
+            $('.playerFour').append(p4Div);
+            $('#p4Div').empty();
+            var p4High = '<p>';
+            p4High += 'Player 4, This is too high: ';
+            p4High += playerGuessArray[i].playerFour;
+            p4High += '</p>';
+            $('#p4Div').append(p4High);
         } // end player 4 too high
         else if (playerGuessArray[i].playerFour < randNum) {
-            console.log('PLAYER 4 TOO LOW: ', playerGuessArray[i].playerFour);
+            var p4Div = '<div id="p4Div">';
+            p4Div += '</div>';
+            $('.playerFour').append(p4Div);
+            $('#p4Div').empty();
+            var p4Low = '<p>';
+            p4Low += 'Player 4, This is too high: ';
+            p4Low += playerGuessArray[i].playerFour;
+            p4Low += '</p>';
+            $('#p4Div').append(p4Low);
         } // end player 4 too low
     } // end loop
     winnerFound();
@@ -92,12 +155,13 @@ function checkWinnerFour() {
 
 function winnerFound() {
     if (winners.length > 0) {
-        console.log('WINNER FOUND!!!! ', winners);
+            alert(winners += "   DO YA FEEL IT!?!?!?");
         var createRestart = '<button id="restartBtn">Restart Game</button>';
         $('#gameUI').append(createRestart);
     } // end winner found if
     else {
         playerGuessArray = [];
+        winners = [];
     }
 } // end winner found
 
