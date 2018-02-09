@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Feora1343/Node_Server_Structure#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "init": "^0.1.2"
   }
 }

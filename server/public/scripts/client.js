@@ -5,10 +5,11 @@ var winners = [];
 
 
 $(document).ready(onReady);
-indexAppend();
+
 
 function onReady(){  
-
+setupAppend();
+$('#gameUI').on('click', '#start', playAppend);
     $('#gameUI').on('click', '#submitGuessBtn', function() {
         var newObject = {
             playerOne: Number($('#playerOneInput').val()),
@@ -180,30 +181,46 @@ function guessCounter() {
 } // end guess counter
 
 
-function indexAppend(){
+function playAppend(){
     console.log('Appender Function');
     var $gameUI = $('#gameUI');
     var stringToAppend = '';
     $gameUI.empty();
     stringToAppend += `<h1>Number Guessing Game</h1>`
     stringToAppend += `<div class="playerOne">`
-    stringToAppend += `<p>Player 1<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 1 Guess">`
+    stringToAppend += `<h3>Player 1<h3>`
+    stringToAppend += `<input type="text" id='playerOneInput' placeholder="Player 1 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `<div class="playerTwo">`
-    stringToAppend += `<p>Player 2<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 2 Guess">`
+    stringToAppend += `<h3>Player 2<h3>`
+    stringToAppend += `<input type="text" id="playerTwoInput" placeholder="Player 2 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `<div class="playerThree">`
-    stringToAppend +=  `<p>Player 3<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 3 Guess">`
+    stringToAppend +=  `<h3>Player 3<h3>`
+    stringToAppend += `<input type="text" id="playerThreeInput" placeholder="Player 3 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `<div class="playerFour">`
-    stringToAppend += `<p>Player 4<p>`
-    stringToAppend += `<input type="text" class='guessInput' placeholder="Player 4 Guess">`
+    stringToAppend += `<h3>Player 4<h3>`
+    stringToAppend += `<input type="text" id="playerFourInput" placeholder="Player 4 Guess">`
     stringToAppend += `</div>`
     stringToAppend += `</br>`
     stringToAppend += `<button id="submitGuessBtn">Submit Guesses</button>`
     stringToAppend += `<button id="cancelBtn">Cancel Guesses</button>`
     $gameUI.append(stringToAppend);
- } // end indexAppend 
+ } // end playAppend
+
+ function setupAppend(){
+    console.log('Appender Function');
+    var $gameUI = $('#gameUI');
+    var stringToAppend = '';
+    $gameUI.empty();
+    stringToAppend += `<h1>Number Guessing Game</h1>`
+    stringToAppend += `<h2>Setup</h2>`
+    stringToAppend += `<select id="maxSetter">`
+    stringToAppend += `<option value="15">Easy - 15</option>`
+    stringToAppend += `<option value="100">Normal - 100</option>`
+    stringToAppend += `<option value="1000000000">Impossible - 1,000,000,000</option>`
+    stringToAppend += `</select>`
+    stringToAppend += `<button id="start">Start</button>`
+    $gameUI.append(stringToAppend);
+ } // end setupAppend
