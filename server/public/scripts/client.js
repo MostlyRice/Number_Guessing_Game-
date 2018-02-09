@@ -5,11 +5,11 @@ var winners = [];
 
 
 $(document).ready(onReady);
-
+indexAppend();
 
 function onReady(){  
-   // indexAppend();
-    $('#submitGuessBtn').on('click', function() {
+
+    $('#gameUI').on('click', '#submitGuessBtn', function() {
         var newObject = {
             playerOne: Number($('#playerOneInput').val()),
             playerTwo: Number($('#playerTwoInput').val()),
@@ -23,8 +23,7 @@ function onReady(){
     $('#playerTwoInput').val('');
     $('#playerThreeInput').val('');
     $('#playerFourInput').val('');
-    
-   
+
     checkWinnerOne();
     checkWinnerTwo();
     checkWinnerThree();
